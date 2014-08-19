@@ -33,11 +33,6 @@
     return YES;
 }
 
--(BOOL)prefersStatusBarHidden
-{
-    return YES;
-}
-
 - (NSUInteger)supportedInterfaceOrientations
 {
     if ([[UIDevice currentDevice] userInterfaceIdiom] == UIUserInterfaceIdiomPhone) {
@@ -53,9 +48,9 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(BOOL)prefersStatusBarHidden
+-(UIStatusBarStyle)preferredStatusBarStyle
 {
-    return YES;
+    return UIStatusBarStyleLightContent;
 }
 
 @end

@@ -7,7 +7,7 @@
 //
 
 #import "WNMyScene.h"
-#import "WNBear.h"
+
 #import "WNWatermelon.h"
 
 #import "JCMath.h"
@@ -60,9 +60,6 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     isSlashing = YES;
-    
-    touchLocation = [[touches anyObject] locationInNode:self];
-    lastTouch = touchLocation;
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -110,14 +107,6 @@
         [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
         
         [melons addObject:melon];
-        
-        WNBear *bear = [WNBear addToScene:world];
-        bear.position = CGPointMake(arc4random()%(int)self.size.width, -bear.size.height/2);
-        
-        [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
-        [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
-        
-        [melons addObject:bear];
     }else{
         timeUntilThrow --;
     }
@@ -146,8 +135,6 @@
             [self addSlicesToPoint:melon.position];
             
             [self addParticlesToPoint:melon.position];
-            
-            [self runAction:[SKAction playSoundFileNamed:@"splat.wav" waitForCompletion:NO]];
             
             screenShake += 8;
         }

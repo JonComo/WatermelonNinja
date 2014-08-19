@@ -1,0 +1,540 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		338B2EF519A30D71007D3E76 /* bear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EF419A30D71007D3E76 /* bear.jpg */; };
+		338B2EFC19A3159F007D3E76 /* splat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EFB19A3159F007D3E76 /* splat.wav */; };
+		338B2EFF19A31673007D3E76 /* WNBear.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B2EFE19A31673007D3E76 /* WNBear.m */; };
+		869497F719A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
+		869497F919A2FF0600189DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F819A2FF0600189DAE /* CoreGraphics.framework */; };
+		869497FB19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
+		869497FD19A2FF0600189DAE /* SpriteKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FC19A2FF0600189DAE /* SpriteKit.framework */; };
+		8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8694980119A2FF0600189DAE /* InfoPlist.strings */; };
+		8694980519A2FF0600189DAE /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694980419A2FF0600189DAE /* main.m */; };
+		8694980919A2FF0600189DAE /* WNAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694980819A2FF0600189DAE /* WNAppDelegate.m */; };
+		8694980C19A2FF0600189DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8694980A19A2FF0600189DAE /* Main.storyboard */; };
+		8694980F19A2FF0600189DAE /* WNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694980E19A2FF0600189DAE /* WNViewController.m */; };
+		8694981219A2FF0600189DAE /* WNMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694981119A2FF0600189DAE /* WNMyScene.m */; };
+		8694981619A2FF0600189DAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8694981519A2FF0600189DAE /* Images.xcassets */; };
+		8694981D19A2FF0600189DAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8694981C19A2FF0600189DAE /* XCTest.framework */; };
+		8694981E19A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
+		8694981F19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
+		8694982719A2FF0600189DAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8694982519A2FF0600189DAE /* InfoPlist.strings */; };
+		8694982919A2FF0600189DAE /* WatermelonNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694982819A2FF0600189DAE /* WatermelonNinjaTests.m */; };
+		8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694983619A2FFC200189DAE /* WNWatermelon.m */; };
+		8694983D19A301CF00189DAE /* melon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694983B19A301CF00189DAE /* melon.png */; };
+		8694984119A306BD00189DAE /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694984019A306BD00189DAE /* JCMath.m */; };
+		8694984319A308B600189DAE /* melonSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984219A308B600189DAE /* melonSlice.png */; };
+		8694984519A30DD900189DAE /* juice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984419A30DD900189DAE /* juice.png */; };
+		8694984819A30DF700189DAE /* juiceParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8694984619A30DF700189DAE /* juiceParticles.sks */; };
+		8694984919A30DF700189DAE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984719A30DF700189DAE /* spark.png */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8694982019A2FF0600189DAE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 869497EB19A2FF0600189DAE /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 869497F219A2FF0600189DAE;
+			remoteInfo = WatermelonNinja;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		338B2EF419A30D71007D3E76 /* bear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bear.jpg; sourceTree = "<group>"; };
+		338B2EFB19A3159F007D3E76 /* splat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = splat.wav; sourceTree = "<group>"; };
+		338B2EFD19A31673007D3E76 /* WNBear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNBear.h; sourceTree = "<group>"; };
+		338B2EFE19A31673007D3E76 /* WNBear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNBear.m; sourceTree = "<group>"; };
+		869497F319A2FF0600189DAE /* WatermelonNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatermelonNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		869497F619A2FF0600189DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		869497F819A2FF0600189DAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		869497FA19A2FF0600189DAE /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		869497FC19A2FF0600189DAE /* SpriteKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpriteKit.framework; path = System/Library/Frameworks/SpriteKit.framework; sourceTree = SDKROOT; };
+		8694980019A2FF0600189DAE /* WatermelonNinja-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatermelonNinja-Info.plist"; sourceTree = "<group>"; };
+		8694980219A2FF0600189DAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8694980419A2FF0600189DAE /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8694980619A2FF0600189DAE /* WatermelonNinja-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatermelonNinja-Prefix.pch"; sourceTree = "<group>"; };
+		8694980719A2FF0600189DAE /* WNAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNAppDelegate.h; sourceTree = "<group>"; };
+		8694980819A2FF0600189DAE /* WNAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNAppDelegate.m; sourceTree = "<group>"; };
+		8694980B19A2FF0600189DAE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		8694980D19A2FF0600189DAE /* WNViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNViewController.h; sourceTree = "<group>"; };
+		8694980E19A2FF0600189DAE /* WNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNViewController.m; sourceTree = "<group>"; };
+		8694981019A2FF0600189DAE /* WNMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNMyScene.h; sourceTree = "<group>"; };
+		8694981119A2FF0600189DAE /* WNMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNMyScene.m; sourceTree = "<group>"; };
+		8694981519A2FF0600189DAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		8694981B19A2FF0600189DAE /* WatermelonNinjaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatermelonNinjaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		8694981C19A2FF0600189DAE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		8694982419A2FF0600189DAE /* WatermelonNinjaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatermelonNinjaTests-Info.plist"; sourceTree = "<group>"; };
+		8694982619A2FF0600189DAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		8694982819A2FF0600189DAE /* WatermelonNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatermelonNinjaTests.m; sourceTree = "<group>"; };
+		8694983519A2FFC200189DAE /* WNWatermelon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNWatermelon.h; sourceTree = "<group>"; };
+		8694983619A2FFC200189DAE /* WNWatermelon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNWatermelon.m; sourceTree = "<group>"; };
+		8694983B19A301CF00189DAE /* melon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melon.png; sourceTree = "<group>"; };
+		8694983F19A306BD00189DAE /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
+		8694984019A306BD00189DAE /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
+		8694984219A308B600189DAE /* melonSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melonSlice.png; sourceTree = "<group>"; };
+		8694984419A30DD900189DAE /* juice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juice.png; sourceTree = "<group>"; };
+		8694984619A30DF700189DAE /* juiceParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = juiceParticles.sks; sourceTree = "<group>"; };
+		8694984719A30DF700189DAE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		869497F019A2FF0600189DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				869497F919A2FF0600189DAE /* CoreGraphics.framework in Frameworks */,
+				869497FB19A2FF0600189DAE /* UIKit.framework in Frameworks */,
+				869497FD19A2FF0600189DAE /* SpriteKit.framework in Frameworks */,
+				869497F719A2FF0600189DAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8694981819A2FF0600189DAE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8694981D19A2FF0600189DAE /* XCTest.framework in Frameworks */,
+				8694981F19A2FF0600189DAE /* UIKit.framework in Frameworks */,
+				8694981E19A2FF0600189DAE /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		869497EA19A2FF0600189DAE = {
+			isa = PBXGroup;
+			children = (
+				869497FE19A2FF0600189DAE /* WatermelonNinja */,
+				8694982219A2FF0600189DAE /* WatermelonNinjaTests */,
+				869497F519A2FF0600189DAE /* Frameworks */,
+				869497F419A2FF0600189DAE /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		869497F419A2FF0600189DAE /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				869497F319A2FF0600189DAE /* WatermelonNinja.app */,
+				8694981B19A2FF0600189DAE /* WatermelonNinjaTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		869497F519A2FF0600189DAE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				869497F619A2FF0600189DAE /* Foundation.framework */,
+				869497F819A2FF0600189DAE /* CoreGraphics.framework */,
+				869497FA19A2FF0600189DAE /* UIKit.framework */,
+				869497FC19A2FF0600189DAE /* SpriteKit.framework */,
+				8694981C19A2FF0600189DAE /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		869497FE19A2FF0600189DAE /* WatermelonNinja */ = {
+			isa = PBXGroup;
+			children = (
+				8694983A19A301CF00189DAE /* media */,
+				8694983F19A306BD00189DAE /* JCMath.h */,
+				8694984019A306BD00189DAE /* JCMath.m */,
+				8694980719A2FF0600189DAE /* WNAppDelegate.h */,
+				8694980819A2FF0600189DAE /* WNAppDelegate.m */,
+				8694980A19A2FF0600189DAE /* Main.storyboard */,
+				8694980D19A2FF0600189DAE /* WNViewController.h */,
+				8694980E19A2FF0600189DAE /* WNViewController.m */,
+				8694981019A2FF0600189DAE /* WNMyScene.h */,
+				8694981119A2FF0600189DAE /* WNMyScene.m */,
+				8694983519A2FFC200189DAE /* WNWatermelon.h */,
+				8694983619A2FFC200189DAE /* WNWatermelon.m */,
+				338B2EFD19A31673007D3E76 /* WNBear.h */,
+				338B2EFE19A31673007D3E76 /* WNBear.m */,
+				8694981519A2FF0600189DAE /* Images.xcassets */,
+				869497FF19A2FF0600189DAE /* Supporting Files */,
+				8694984619A30DF700189DAE /* juiceParticles.sks */,
+				8694984719A30DF700189DAE /* spark.png */,
+			);
+			path = WatermelonNinja;
+			sourceTree = "<group>";
+		};
+		869497FF19A2FF0600189DAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8694980019A2FF0600189DAE /* WatermelonNinja-Info.plist */,
+				8694980119A2FF0600189DAE /* InfoPlist.strings */,
+				8694980419A2FF0600189DAE /* main.m */,
+				8694980619A2FF0600189DAE /* WatermelonNinja-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8694982219A2FF0600189DAE /* WatermelonNinjaTests */ = {
+			isa = PBXGroup;
+			children = (
+				8694982819A2FF0600189DAE /* WatermelonNinjaTests.m */,
+				8694982319A2FF0600189DAE /* Supporting Files */,
+			);
+			path = WatermelonNinjaTests;
+			sourceTree = "<group>";
+		};
+		8694982319A2FF0600189DAE /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8694982419A2FF0600189DAE /* WatermelonNinjaTests-Info.plist */,
+				8694982519A2FF0600189DAE /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8694983A19A301CF00189DAE /* media */ = {
+			isa = PBXGroup;
+			children = (
+				338B2EFB19A3159F007D3E76 /* splat.wav */,
+				8694984419A30DD900189DAE /* juice.png */,
+				338B2EF419A30D71007D3E76 /* bear.jpg */,
+				8694984219A308B600189DAE /* melonSlice.png */,
+				8694983B19A301CF00189DAE /* melon.png */,
+			);
+			path = media;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		869497F219A2FF0600189DAE /* WatermelonNinja */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8694982C19A2FF0600189DAE /* Build configuration list for PBXNativeTarget "WatermelonNinja" */;
+			buildPhases = (
+				869497EF19A2FF0600189DAE /* Sources */,
+				869497F019A2FF0600189DAE /* Frameworks */,
+				869497F119A2FF0600189DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = WatermelonNinja;
+			productName = WatermelonNinja;
+			productReference = 869497F319A2FF0600189DAE /* WatermelonNinja.app */;
+			productType = "com.apple.product-type.application";
+		};
+		8694981A19A2FF0600189DAE /* WatermelonNinjaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8694982F19A2FF0600189DAE /* Build configuration list for PBXNativeTarget "WatermelonNinjaTests" */;
+			buildPhases = (
+				8694981719A2FF0600189DAE /* Sources */,
+				8694981819A2FF0600189DAE /* Frameworks */,
+				8694981919A2FF0600189DAE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8694982119A2FF0600189DAE /* PBXTargetDependency */,
+			);
+			name = WatermelonNinjaTests;
+			productName = WatermelonNinjaTests;
+			productReference = 8694981B19A2FF0600189DAE /* WatermelonNinjaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		869497EB19A2FF0600189DAE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = WN;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = UNMD76;
+				TargetAttributes = {
+					8694981A19A2FF0600189DAE = {
+						TestTargetID = 869497F219A2FF0600189DAE;
+					};
+				};
+			};
+			buildConfigurationList = 869497EE19A2FF0600189DAE /* Build configuration list for PBXProject "WatermelonNinja" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 869497EA19A2FF0600189DAE;
+			productRefGroup = 869497F419A2FF0600189DAE /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				869497F219A2FF0600189DAE /* WatermelonNinja */,
+				8694981A19A2FF0600189DAE /* WatermelonNinjaTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		869497F119A2FF0600189DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8694984819A30DF700189DAE /* juiceParticles.sks in Resources */,
+				8694984919A30DF700189DAE /* spark.png in Resources */,
+				8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */,
+				338B2EFC19A3159F007D3E76 /* splat.wav in Resources */,
+				338B2EF519A30D71007D3E76 /* bear.jpg in Resources */,
+				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
+				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
+				8694983D19A301CF00189DAE /* melon.png in Resources */,
+				8694984319A308B600189DAE /* melonSlice.png in Resources */,
+				8694984519A30DD900189DAE /* juice.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8694981919A2FF0600189DAE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8694982719A2FF0600189DAE /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		869497EF19A2FF0600189DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				338B2EFF19A31673007D3E76 /* WNBear.m in Sources */,
+				8694980F19A2FF0600189DAE /* WNViewController.m in Sources */,
+				8694980519A2FF0600189DAE /* main.m in Sources */,
+				8694984119A306BD00189DAE /* JCMath.m in Sources */,
+				8694980919A2FF0600189DAE /* WNAppDelegate.m in Sources */,
+				8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */,
+				8694981219A2FF0600189DAE /* WNMyScene.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		8694981719A2FF0600189DAE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8694982919A2FF0600189DAE /* WatermelonNinjaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8694982119A2FF0600189DAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 869497F219A2FF0600189DAE /* WatermelonNinja */;
+			targetProxy = 8694982019A2FF0600189DAE /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		8694980119A2FF0600189DAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8694980219A2FF0600189DAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		8694980A19A2FF0600189DAE /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8694980B19A2FF0600189DAE /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		8694982519A2FF0600189DAE /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8694982619A2FF0600189DAE /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8694982A19A2FF0600189DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8694982B19A2FF0600189DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8694982D19A2FF0600189DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WatermelonNinja/WatermelonNinja-Prefix.pch";
+				INFOPLIST_FILE = "WatermelonNinja/WatermelonNinja-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		8694982E19A2FF0600189DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WatermelonNinja/WatermelonNinja-Prefix.pch";
+				INFOPLIST_FILE = "WatermelonNinja/WatermelonNinja-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SPRITEKIT_TEXTURE_ATLAS_OUTPUT = YES;
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		8694983019A2FF0600189DAE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WatermelonNinja.app/WatermelonNinja";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WatermelonNinja/WatermelonNinja-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "WatermelonNinjaTests/WatermelonNinjaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		8694983119A2FF0600189DAE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/WatermelonNinja.app/WatermelonNinja";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "WatermelonNinja/WatermelonNinja-Prefix.pch";
+				INFOPLIST_FILE = "WatermelonNinjaTests/WatermelonNinjaTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		869497EE19A2FF0600189DAE /* Build configuration list for PBXProject "WatermelonNinja" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8694982A19A2FF0600189DAE /* Debug */,
+				8694982B19A2FF0600189DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8694982C19A2FF0600189DAE /* Build configuration list for PBXNativeTarget "WatermelonNinja" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8694982D19A2FF0600189DAE /* Debug */,
+				8694982E19A2FF0600189DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8694982F19A2FF0600189DAE /* Build configuration list for PBXNativeTarget "WatermelonNinjaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8694983019A2FF0600189DAE /* Debug */,
+				8694983119A2FF0600189DAE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 869497EB19A2FF0600189DAE /* Project object */;
+}
