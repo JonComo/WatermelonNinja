@@ -14,7 +14,7 @@
 {
     WNBear *bear = [[WNBear alloc] initWithTexture:[SKTexture textureWithImageNamed:@"bear"]];
     
-    bear.xScale = bear.yScale = 0.5;
+    bear.xScale = bear.yScale = 0.35;
     
     bear.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:bear.size.width*0.4];
     
