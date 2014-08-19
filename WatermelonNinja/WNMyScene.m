@@ -10,10 +10,15 @@
 
 #import "WNWatermelon.h"
 
+#import "JCMath.h"
+
 @implementation WNMyScene
 {
     int timeUntilThrow;
     NSMutableArray *melons;
+    
+    CGPoint lastTouch;
+    SKSpriteNode *slashNode;
 }
 
 -(id)initWithSize:(CGSize)size {    
@@ -25,17 +30,28 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
+        slashNode = [[SKSpriteNode alloc] initWithColor:[UIColor whiteColor] size:CGSizeMake(100, 10)];
+        slashNode.position = CGPointMake(size.width/2, size.height/2);
+        [self addChild:slashNode];
+        
     }
     return self;
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
-    /* Called when a touch begins */
+-(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    CGPoint location = [[touches anyObject] locationInNode:self];
     
-    for (UITouch *touch in touches) {
-        CGPoint location = [touch locationInNode:self];
-        
-    }
+    slashNode.position = location;
+    slashNode.alpha = sqrt(pow(location.x - lastTouch.x, 2) + pow(location.y - lastTouch.y, 2))/100;
+    slashNode.zRotation = [JCMath angleFromPoint:lastTouch toPoint:location];
+    
+    lastTouch = location;
+}
+
+-(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    slashNode.alpha = 0;
 }
 
 -(void)update:(CFTimeInterval)currentTime {

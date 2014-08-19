@@ -25,6 +25,7 @@
 		8694982919A2FF0600189DAE /* WatermelonNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694982819A2FF0600189DAE /* WatermelonNinjaTests.m */; };
 		8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694983619A2FFC200189DAE /* WNWatermelon.m */; };
 		8694983D19A301CF00189DAE /* melon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694983B19A301CF00189DAE /* melon.png */; };
+		8694984119A306BD00189DAE /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694984019A306BD00189DAE /* JCMath.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		8694983519A2FFC200189DAE /* WNWatermelon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNWatermelon.h; sourceTree = "<group>"; };
 		8694983619A2FFC200189DAE /* WNWatermelon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNWatermelon.m; sourceTree = "<group>"; };
 		8694983B19A301CF00189DAE /* melon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melon.png; sourceTree = "<group>"; };
+		8694983F19A306BD00189DAE /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
+		8694984019A306BD00189DAE /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +128,8 @@
 			isa = PBXGroup;
 			children = (
 				8694983A19A301CF00189DAE /* media */,
+				8694983F19A306BD00189DAE /* JCMath.h */,
+				8694984019A306BD00189DAE /* JCMath.m */,
 				8694980719A2FF0600189DAE /* WNAppDelegate.h */,
 				8694980819A2FF0600189DAE /* WNAppDelegate.m */,
 				8694980A19A2FF0600189DAE /* Main.storyboard */,
@@ -278,6 +283,7 @@
 			files = (
 				8694980F19A2FF0600189DAE /* WNViewController.m in Sources */,
 				8694980519A2FF0600189DAE /* main.m in Sources */,
+				8694984119A306BD00189DAE /* JCMath.m in Sources */,
 				8694980919A2FF0600189DAE /* WNAppDelegate.m in Sources */,
 				8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */,
 				8694981219A2FF0600189DAE /* WNMyScene.m in Sources */,
