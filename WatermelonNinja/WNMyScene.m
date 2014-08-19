@@ -10,6 +10,8 @@
 
 #import "WNWatermelon.h"
 
+#import "WNBear.h"
+
 #import "JCMath.h"
 
 @implementation WNMyScene
@@ -17,6 +19,7 @@
     int timeUntilThrow;
     
     NSMutableArray *melons;
+    NSMutableArray *bears;
     NSMutableArray *effects;
     
     CGPoint touchLocation;
@@ -42,6 +45,7 @@
         
         melons = [NSMutableArray array];
         effects = [NSMutableArray array];
+        bears = [NSMutableArray array];
         
         timeUntilThrow = 20;
         screenShake = 0;
@@ -100,7 +104,7 @@
     }
     
     if (timeUntilThrow < 0){
-        timeUntilThrow += 40;
+        timeUntilThrow += 60;
         //throw a watermelon out!
         
         WNWatermelon *melon = [WNWatermelon addToScene:world];
@@ -110,8 +114,33 @@
         [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
         
         [melons addObject:melon];
+        
+        WNBear *bear = [WNBear addToScene:world];
+    
+        bear.position = CGPointMake(arc4random()%(int)self.size.width, -bear.size.height/2);
+        
+        [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
+        [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
+
+        [bears addObject:bear];
     }else{
         timeUntilThrow --;
+    }
+    
+    for (int j = bears.count-1; j>0; j--) {
+        WNBear *aBear = bears[j];
+        if (aBear.position.x < aBear.size.width/2){
+            aBear.position = CGPointMake(aBear.size.width/2, aBear.position.y);
+        }else if (aBear.position.x > self.size.width - aBear.size.width/2){
+            aBear.position = CGPointMake(self.size.width - aBear.size.width/2, aBear.position.y);
+        }
+        
+        if (aBear.position.y < -100 || aBear.position.y > 400){
+            //Fell out of world
+            [aBear removeFromParent];
+            [bears removeObject:aBear];
+        }
+        
     }
     
     for (int i = melons.count-1; i>0; i--){

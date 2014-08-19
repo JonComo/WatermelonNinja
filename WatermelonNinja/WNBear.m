@@ -14,10 +14,11 @@
 {
     WNBear *bear = [[WNBear alloc] initWithTexture:[SKTexture textureWithImageNamed:@"bear"]];
     
-    bear.xScale = bear.yScale = 0.35;
+    bear.xScale = bear.yScale = 0.3;
     
     bear.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:bear.size.width*0.4];
-    
+    bear.physicsBody.allowsRotation = NO;
+    bear.physicsBody.mass = 0.3;
     
     [scene addChild:bear];
     
