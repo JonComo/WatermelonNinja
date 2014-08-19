@@ -32,6 +32,8 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
+        self.physicsWorld.gravity = CGVectorMake(0, -4);
+        
         melons = [NSMutableArray array];
         effects = [NSMutableArray array];
         
@@ -81,8 +83,8 @@
         WNWatermelon *melon = [WNWatermelon addToScene:self];
         melon.position = CGPointMake(arc4random()%(int)self.size.width, -melon.size.height/2);
         
-        [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%200 + 200)];
-        [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/20.0f];
+        [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
+        [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
         
         [melons addObject:melon];
     }else{
@@ -91,13 +93,20 @@
     
     for (int i = melons.count-1; i>0; i--){
         WNWatermelon *melon = melons[i];
+        
+        if (melon.position.x < melon.size.width/2){
+            melon.position = CGPointMake(melon.size.width/2, melon.position.y);
+        }else if (melon.position.x > self.size.width - melon.size.width/2){
+            melon.position = CGPointMake(self.size.width - melon.size.width/2, melon.position.y);
+        }
+        
         if (melon.position.y < -100){
             //Fell out of world
             [melon removeFromParent];
             [melons removeObject:melon];
         }
         
-        if (isSlashing && [JCMath distanceBetweenPoint:touchLocation andPoint:melon.position sorting:NO] < melon.size.width){
+        if (isSlashing && slashPower > 0.2 && [JCMath distanceBetweenPoint:touchLocation andPoint:melon.position sorting:NO] < melon.size.width){
             //Slashed a melon!!
             [melon removeFromParent];
             [melons removeObject:melon];
@@ -121,14 +130,15 @@
 -(void)addSlicesToPoint:(CGPoint)point
 {
     SKSpriteNode *slice = [[SKSpriteNode alloc] initWithImageNamed:@"melonSlice"];
-    slice.position = CGPointMake(point.x + (float)(arc4random()%4) -2.0f, point.y + (float)(arc4random()%4) -2.0f);
+    slice.position = CGPointMake(point.x + (float)(arc4random()%40) -20.0f, point.y + (float)(arc4random()%40) -20.0f);
     slice.xScale = slice.yScale = 0.5;
+    
+    [self addChild:slice];
+    
     slice.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:slice.size.width*0.3];
     slice.physicsBody.mass = 0.1;
     
     [slice.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
-    
-    [self addChild:slice];
     
     [effects addObject:slice];
 }
