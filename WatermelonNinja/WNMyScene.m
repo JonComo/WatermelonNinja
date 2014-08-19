@@ -81,6 +81,11 @@
     isSlashing = NO;
 }
 
+-(void)touchesCancelled:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    [self touchesEnded:touches withEvent:event];
+}
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     
@@ -158,7 +163,7 @@
     slice.physicsBody.mass = 0.1;
     
     [slice.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
-    [slice.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/60.0f];
+    [slice.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/200.0f];
     
     [effects addObject:slice];
 }
