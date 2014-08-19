@@ -10,7 +10,7 @@
 
 @implementation WNWatermelon
 
-+(WNWatermelon *)addToScene:(SKScene *)scene
++(WNWatermelon *)addToScene:(SKNode *)scene
 {
     WNWatermelon *melon = [[WNWatermelon alloc] initWithTexture:[SKTexture textureWithImageNamed:@"melon"]];
     

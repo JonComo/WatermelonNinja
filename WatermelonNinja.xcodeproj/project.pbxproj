@@ -8,8 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		338B2EF519A30D71007D3E76 /* bear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EF419A30D71007D3E76 /* bear.jpg */; };
-		338B2EF719A30F57007D3E76 /* splat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EF619A30F57007D3E76 /* splat.wav */; };
-		338B2EFA19A311AB007D3E76 /* WNBear.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B2EF919A311AB007D3E76 /* WNBear.m */; };
 		869497F719A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
 		869497F919A2FF0600189DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F819A2FF0600189DAE /* CoreGraphics.framework */; };
 		869497FB19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
@@ -30,6 +28,9 @@
 		8694983D19A301CF00189DAE /* melon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694983B19A301CF00189DAE /* melon.png */; };
 		8694984119A306BD00189DAE /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694984019A306BD00189DAE /* JCMath.m */; };
 		8694984319A308B600189DAE /* melonSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984219A308B600189DAE /* melonSlice.png */; };
+		8694984519A30DD900189DAE /* juice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984419A30DD900189DAE /* juice.png */; };
+		8694984819A30DF700189DAE /* juiceParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8694984619A30DF700189DAE /* juiceParticles.sks */; };
+		8694984919A30DF700189DAE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984719A30DF700189DAE /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +45,6 @@
 
 /* Begin PBXFileReference section */
 		338B2EF419A30D71007D3E76 /* bear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bear.jpg; sourceTree = "<group>"; };
-		338B2EF619A30F57007D3E76 /* splat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = splat.wav; sourceTree = "<group>"; };
-		338B2EF819A311AB007D3E76 /* WNBear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNBear.h; sourceTree = "<group>"; };
-		338B2EF919A311AB007D3E76 /* WNBear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNBear.m; sourceTree = "<group>"; };
 		869497F319A2FF0600189DAE /* WatermelonNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatermelonNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869497F619A2FF0600189DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		869497F819A2FF0600189DAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -75,6 +73,9 @@
 		8694983F19A306BD00189DAE /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
 		8694984019A306BD00189DAE /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
 		8694984219A308B600189DAE /* melonSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melonSlice.png; sourceTree = "<group>"; };
+		8694984419A30DD900189DAE /* juice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juice.png; sourceTree = "<group>"; };
+		8694984619A30DF700189DAE /* juiceParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = juiceParticles.sks; sourceTree = "<group>"; };
+		8694984719A30DF700189DAE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,10 +149,10 @@
 				8694981119A2FF0600189DAE /* WNMyScene.m */,
 				8694983519A2FFC200189DAE /* WNWatermelon.h */,
 				8694983619A2FFC200189DAE /* WNWatermelon.m */,
-				338B2EF819A311AB007D3E76 /* WNBear.h */,
-				338B2EF919A311AB007D3E76 /* WNBear.m */,
 				8694981519A2FF0600189DAE /* Images.xcassets */,
 				869497FF19A2FF0600189DAE /* Supporting Files */,
+				8694984619A30DF700189DAE /* juiceParticles.sks */,
+				8694984719A30DF700189DAE /* spark.png */,
 			);
 			path = WatermelonNinja;
 			sourceTree = "<group>";
@@ -188,7 +189,7 @@
 		8694983A19A301CF00189DAE /* media */ = {
 			isa = PBXGroup;
 			children = (
-				338B2EF619A30F57007D3E76 /* splat.wav */,
+				8694984419A30DD900189DAE /* juice.png */,
 				338B2EF419A30D71007D3E76 /* bear.jpg */,
 				8694984219A308B600189DAE /* melonSlice.png */,
 				8694983B19A301CF00189DAE /* melon.png */,
@@ -273,13 +274,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8694984819A30DF700189DAE /* juiceParticles.sks in Resources */,
+				8694984919A30DF700189DAE /* spark.png in Resources */,
 				8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */,
 				338B2EF519A30D71007D3E76 /* bear.jpg in Resources */,
 				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
 				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
 				8694983D19A301CF00189DAE /* melon.png in Resources */,
-				338B2EF719A30F57007D3E76 /* splat.wav in Resources */,
 				8694984319A308B600189DAE /* melonSlice.png in Resources */,
+				8694984519A30DD900189DAE /* juice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -298,7 +301,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				338B2EFA19A311AB007D3E76 /* WNBear.m in Sources */,
 				8694980F19A2FF0600189DAE /* WNViewController.m in Sources */,
 				8694980519A2FF0600189DAE /* main.m in Sources */,
 				8694984119A306BD00189DAE /* JCMath.m in Sources */,
