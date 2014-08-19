@@ -97,7 +97,7 @@
             [melons removeObject:melon];
         }
         
-        if (slashPower > 0.2 && [JCMath distanceBetweenPoint:touchLocation andPoint:melon.position sorting:NO] < melon.size.width){
+        if (isSlashing && [JCMath distanceBetweenPoint:touchLocation andPoint:melon.position sorting:NO] < melon.size.width){
             //Slashed a melon!!
             [melon removeFromParent];
             [melons removeObject:melon];
@@ -124,6 +124,9 @@
     slice.position = CGPointMake(point.x + (float)(arc4random()%4) -2.0f, point.y + (float)(arc4random()%4) -2.0f);
     slice.xScale = slice.yScale = 0.5;
     slice.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:slice.size.width*0.3];
+    slice.physicsBody.mass = 0.1;
+    
+    [slice.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
     
     [self addChild:slice];
     
