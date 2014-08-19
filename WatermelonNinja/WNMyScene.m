@@ -8,7 +8,12 @@
 
 #import "WNMyScene.h"
 
+#import "WNWatermelon.h"
+
 @implementation WNMyScene
+{
+    int timeUntilThrow;
+}
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
@@ -16,14 +21,6 @@
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
-        SKLabelNode *myLabel = [SKLabelNode labelNodeWithFontNamed:@"Chalkduster"];
-        
-        myLabel.text = @"Hello, World!";
-        myLabel.fontSize = 30;
-        myLabel.position = CGPointMake(CGRectGetMidX(self.frame),
-                                       CGRectGetMidY(self.frame));
-        
-        [self addChild:myLabel];
     }
     return self;
 }
@@ -34,20 +31,23 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
         
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
-        
-        sprite.position = location;
-        
-        SKAction *action = [SKAction rotateByAngle:M_PI duration:1];
-        
-        [sprite runAction:[SKAction repeatActionForever:action]];
-        
-        [self addChild:sprite];
     }
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    if (timeUntilThrow < 0){
+        timeUntilThrow += 100;
+        //throw a watermelon out!
+        
+        WNWatermelon *melon = [WNWatermelon addToScene:self];
+        melon.position = CGPointMake(arc4random()%(int)self.size.width, -melon.size.height/2);
+        
+        [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%200 + 200)];
+        [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/20.0f];
+    }else{
+        timeUntilThrow --;
+    }
 }
 
 @end

@@ -17,13 +17,14 @@
 		8694980C19A2FF0600189DAE /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8694980A19A2FF0600189DAE /* Main.storyboard */; };
 		8694980F19A2FF0600189DAE /* WNViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694980E19A2FF0600189DAE /* WNViewController.m */; };
 		8694981219A2FF0600189DAE /* WNMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694981119A2FF0600189DAE /* WNMyScene.m */; };
-		8694981419A2FF0600189DAE /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694981319A2FF0600189DAE /* Spaceship.png */; };
 		8694981619A2FF0600189DAE /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8694981519A2FF0600189DAE /* Images.xcassets */; };
 		8694981D19A2FF0600189DAE /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8694981C19A2FF0600189DAE /* XCTest.framework */; };
 		8694981E19A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
 		8694981F19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
 		8694982719A2FF0600189DAE /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 8694982519A2FF0600189DAE /* InfoPlist.strings */; };
 		8694982919A2FF0600189DAE /* WatermelonNinjaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694982819A2FF0600189DAE /* WatermelonNinjaTests.m */; };
+		8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694983619A2FFC200189DAE /* WNWatermelon.m */; };
+		8694983D19A301CF00189DAE /* melon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694983B19A301CF00189DAE /* melon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,13 +54,15 @@
 		8694980E19A2FF0600189DAE /* WNViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNViewController.m; sourceTree = "<group>"; };
 		8694981019A2FF0600189DAE /* WNMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WNMyScene.h; sourceTree = "<group>"; };
 		8694981119A2FF0600189DAE /* WNMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WNMyScene.m; sourceTree = "<group>"; };
-		8694981319A2FF0600189DAE /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		8694981519A2FF0600189DAE /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8694981B19A2FF0600189DAE /* WatermelonNinjaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatermelonNinjaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8694981C19A2FF0600189DAE /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		8694982419A2FF0600189DAE /* WatermelonNinjaTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WatermelonNinjaTests-Info.plist"; sourceTree = "<group>"; };
 		8694982619A2FF0600189DAE /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		8694982819A2FF0600189DAE /* WatermelonNinjaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WatermelonNinjaTests.m; sourceTree = "<group>"; };
+		8694983519A2FFC200189DAE /* WNWatermelon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNWatermelon.h; sourceTree = "<group>"; };
+		8694983619A2FFC200189DAE /* WNWatermelon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNWatermelon.m; sourceTree = "<group>"; };
+		8694983B19A301CF00189DAE /* melon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +124,7 @@
 		869497FE19A2FF0600189DAE /* WatermelonNinja */ = {
 			isa = PBXGroup;
 			children = (
+				8694983A19A301CF00189DAE /* media */,
 				8694980719A2FF0600189DAE /* WNAppDelegate.h */,
 				8694980819A2FF0600189DAE /* WNAppDelegate.m */,
 				8694980A19A2FF0600189DAE /* Main.storyboard */,
@@ -128,7 +132,8 @@
 				8694980E19A2FF0600189DAE /* WNViewController.m */,
 				8694981019A2FF0600189DAE /* WNMyScene.h */,
 				8694981119A2FF0600189DAE /* WNMyScene.m */,
-				8694981319A2FF0600189DAE /* Spaceship.png */,
+				8694983519A2FFC200189DAE /* WNWatermelon.h */,
+				8694983619A2FFC200189DAE /* WNWatermelon.m */,
 				8694981519A2FF0600189DAE /* Images.xcassets */,
 				869497FF19A2FF0600189DAE /* Supporting Files */,
 			);
@@ -162,6 +167,14 @@
 				8694982519A2FF0600189DAE /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		8694983A19A301CF00189DAE /* media */ = {
+			isa = PBXGroup;
+			children = (
+				8694983B19A301CF00189DAE /* melon.png */,
+			);
+			path = media;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -243,8 +256,8 @@
 			files = (
 				8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */,
 				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
-				8694981419A2FF0600189DAE /* Spaceship.png in Resources */,
 				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
+				8694983D19A301CF00189DAE /* melon.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -266,6 +279,7 @@
 				8694980F19A2FF0600189DAE /* WNViewController.m in Sources */,
 				8694980519A2FF0600189DAE /* main.m in Sources */,
 				8694980919A2FF0600189DAE /* WNAppDelegate.m in Sources */,
+				8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */,
 				8694981219A2FF0600189DAE /* WNMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

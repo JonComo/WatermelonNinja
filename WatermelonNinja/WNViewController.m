@@ -48,4 +48,9 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
+-(UIStatusBarStyle)preferredStatusBarStyle
+{
+    return UIStatusBarStyleLightContent;
+}
+
 @end
