@@ -26,6 +26,7 @@
 		8694983719A2FFC200189DAE /* WNWatermelon.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694983619A2FFC200189DAE /* WNWatermelon.m */; };
 		8694983D19A301CF00189DAE /* melon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694983B19A301CF00189DAE /* melon.png */; };
 		8694984119A306BD00189DAE /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694984019A306BD00189DAE /* JCMath.m */; };
+		8694984319A308B600189DAE /* melonSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984219A308B600189DAE /* melonSlice.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,7 @@
 		8694983B19A301CF00189DAE /* melon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melon.png; sourceTree = "<group>"; };
 		8694983F19A306BD00189DAE /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
 		8694984019A306BD00189DAE /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
+		8694984219A308B600189DAE /* melonSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melonSlice.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -177,6 +179,7 @@
 		8694983A19A301CF00189DAE /* media */ = {
 			isa = PBXGroup;
 			children = (
+				8694984219A308B600189DAE /* melonSlice.png */,
 				8694983B19A301CF00189DAE /* melon.png */,
 			);
 			path = media;
@@ -263,6 +266,7 @@
 				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
 				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
 				8694983D19A301CF00189DAE /* melon.png in Resources */,
+				8694984319A308B600189DAE /* melonSlice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

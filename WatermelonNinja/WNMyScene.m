@@ -15,10 +15,17 @@
 @implementation WNMyScene
 {
     int timeUntilThrow;
-    NSMutableArray *melons;
     
+    NSMutableArray *melons;
+    NSMutableArray *effects;
+    
+    CGPoint touchLocation;
     CGPoint lastTouch;
     SKSpriteNode *slashNode;
+    
+    BOOL isSlashing;
+    
+    float slashPower;
 }
 
 -(id)initWithSize:(CGSize)size {    
@@ -26,38 +33,49 @@
         /* Setup your scene here */
         
         melons = [NSMutableArray array];
+        effects = [NSMutableArray array];
+        
         timeUntilThrow = 20;
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
         slashNode = [[SKSpriteNode alloc] initWithColor:[UIColor whiteColor] size:CGSizeMake(100, 10)];
         slashNode.position = CGPointMake(size.width/2, size.height/2);
+        slashNode.alpha = 0;
         [self addChild:slashNode];
         
     }
     return self;
 }
 
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    isSlashing = YES;
+}
+
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    CGPoint location = [[touches anyObject] locationInNode:self];
+    touchLocation = [[touches anyObject] locationInNode:self];
     
-    slashNode.position = location;
-    slashNode.alpha = sqrt(pow(location.x - lastTouch.x, 2) + pow(location.y - lastTouch.y, 2))/100;
-    slashNode.zRotation = [JCMath angleFromPoint:lastTouch toPoint:location];
+    slashPower = sqrt(pow(touchLocation.x - lastTouch.x, 2) + pow(touchLocation.y - lastTouch.y, 2))/100;
     
-    lastTouch = location;
+    slashNode.position = touchLocation;
+    slashNode.alpha = slashPower;
+    slashNode.zRotation = [JCMath angleFromPoint:lastTouch toPoint:touchLocation];
+    
+    lastTouch = touchLocation;
 }
 
 -(void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
     slashNode.alpha = 0;
+    isSlashing = NO;
 }
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if (timeUntilThrow < 0){
-        timeUntilThrow += 20;
+        timeUntilThrow += 40;
         //throw a watermelon out!
         
         WNWatermelon *melon = [WNWatermelon addToScene:self];
@@ -78,7 +96,38 @@
             [melon removeFromParent];
             [melons removeObject:melon];
         }
+        
+        if (slashPower > 0.2 && [JCMath distanceBetweenPoint:touchLocation andPoint:melon.position sorting:NO] < melon.size.width){
+            //Slashed a melon!!
+            [melon removeFromParent];
+            [melons removeObject:melon];
+            
+            [self addSlicesToPoint:melon.position];
+            [self addSlicesToPoint:melon.position];
+        }
     }
+    
+    //for slices and particles
+    for (int i = effects.count-1; i>0; i--){
+        SKSpriteNode *node = effects[i];
+        
+        if (node.position.y < -100){
+            [effects removeObject:node];
+            [node removeFromParent];
+        }
+    }
+}
+
+-(void)addSlicesToPoint:(CGPoint)point
+{
+    SKSpriteNode *slice = [[SKSpriteNode alloc] initWithImageNamed:@"melonSlice"];
+    slice.position = CGPointMake(point.x + (float)(arc4random()%4) -2.0f, point.y + (float)(arc4random()%4) -2.0f);
+    slice.xScale = slice.yScale = 0.5;
+    slice.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:slice.size.width*0.3];
+    
+    [self addChild:slice];
+    
+    [effects addObject:slice];
 }
 
 @end
