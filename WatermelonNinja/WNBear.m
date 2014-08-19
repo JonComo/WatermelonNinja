@@ -7,6 +7,7 @@
 //
 
 #import "WNBear.h"
+#import "WNMyScene.h"
 
 @implementation WNBear
 

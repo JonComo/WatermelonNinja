@@ -14,6 +14,17 @@
 
 #import "JCMath.h"
 
+static const uint32_t watermelonCategory = 0x1 << 0;
+static const uint32_t sliceCategory      = 0x1 << 1;
+static const uint32_t bearCategory       = 0x1 << 2;
+static const uint32_t worldCategory      = 0x1 << 3;
+
+@interface WNMyScene () <SKPhysicsContactDelegate>{
+    
+}
+
+@end
+
 @implementation WNMyScene
 {
     int timeUntilThrow;
@@ -56,6 +67,9 @@
         slashNode.position = CGPointMake(size.width/2, size.height/2);
         slashNode.alpha = 0;
         [self addChild:slashNode];
+        
+        self.physicsWorld.contactDelegate = self;
+        
         
     }
     return self;
@@ -112,7 +126,10 @@
         
         [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
         [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
-        
+        melon.physicsBody.categoryBitMask = watermelonCategory;
+        melon.physicsBody.contactTestBitMask = sliceCategory | watermelonCategory | bearCategory;
+        melon.physicsBody.collisionBitMask = watermelonCategory;
+        melon.physicsBody.usesPreciseCollisionDetection = YES;
         [melons addObject:melon];
         
         WNBear *bear = [WNBear addToScene:world];
@@ -121,7 +138,12 @@
         
         [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
         [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
+        bear.physicsBody.categoryBitMask = bearCategory;
+        bear.physicsBody.contactTestBitMask = sliceCategory | watermelonCategory | bearCategory;
+        bear.physicsBody.collisionBitMask = 0;
 
+        
+        
         [bears addObject:bear];
     }else{
         timeUntilThrow --;
@@ -195,6 +217,10 @@
     
     slice.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:slice.size.width*0.3];
     slice.physicsBody.mass = 0.1;
+    slice.physicsBody.categoryBitMask = sliceCategory;
+    slice.physicsBody.collisionBitMask = 0;
+    slice.physicsBody.contactTestBitMask = watermelonCategory|bearCategory|worldCategory;
+
     
     [slice.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
     [slice.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/200.0f];
