@@ -124,6 +124,7 @@
         [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
         [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
 
+        [self runAction:[SKAction playSoundFileNamed:@"thoop.wav" waitForCompletion:NO]];
 
         [melons addObject:melon];
         
@@ -134,7 +135,6 @@
         [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
         [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
 
-        [self runAction:[SKAction playSoundFileNamed:@"imabear.m4a" waitForCompletion:NO]];
         [bears addObject:bear];
     }else{
         timeUntilThrow --;

@@ -12,6 +12,7 @@
 		338B2EFF19A31673007D3E76 /* WNBear.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B2EFE19A31673007D3E76 /* WNBear.m */; };
 		338B2F0419A3FF85007D3E76 /* xbear.png in Resources */ = {isa = PBXBuildFile; fileRef = 338B2F0319A3FF85007D3E76 /* xbear.png */; };
 		338B2F0619A40172007D3E76 /* imabear.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 338B2F0519A40172007D3E76 /* imabear.m4a */; };
+		338B2F0819A403C9007D3E76 /* thoop.wav in Resources */ = {isa = PBXBuildFile; fileRef = 338B2F0719A403C9007D3E76 /* thoop.wav */; };
 		869497F719A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
 		869497F919A2FF0600189DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F819A2FF0600189DAE /* CoreGraphics.framework */; };
 		869497FB19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
@@ -60,6 +61,7 @@
 		338B2F0219A3FAF0007D3E76 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
 		338B2F0319A3FF85007D3E76 /* xbear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xbear.png; sourceTree = "<group>"; };
 		338B2F0519A40172007D3E76 /* imabear.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = imabear.m4a; sourceTree = "<group>"; };
+		338B2F0719A403C9007D3E76 /* thoop.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = thoop.wav; sourceTree = "<group>"; };
 		869497F319A2FF0600189DAE /* WatermelonNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatermelonNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869497F619A2FF0600189DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		869497F819A2FF0600189DAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -215,6 +217,7 @@
 		8694983A19A301CF00189DAE /* media */ = {
 			isa = PBXGroup;
 			children = (
+				338B2F0719A403C9007D3E76 /* thoop.wav */,
 				338B2F0519A40172007D3E76 /* imabear.m4a */,
 				338B2F0319A3FF85007D3E76 /* xbear.png */,
 				8694985319A31FA500189DAE /* playButton.png */,
@@ -322,6 +325,7 @@
 				338B2F0619A40172007D3E76 /* imabear.m4a in Resources */,
 				8694984B19A31AD700189DAE /* bear.png in Resources */,
 				8694984319A308B600189DAE /* melonSlice.png in Resources */,
+				338B2F0819A403C9007D3E76 /* thoop.wav in Resources */,
 				8694984519A30DD900189DAE /* juice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
