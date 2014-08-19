@@ -13,11 +13,15 @@
 @implementation WNMyScene
 {
     int timeUntilThrow;
+    NSMutableArray *melons;
 }
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        
+        melons = [NSMutableArray array];
+        timeUntilThrow = 20;
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
@@ -37,7 +41,7 @@
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
     if (timeUntilThrow < 0){
-        timeUntilThrow += 100;
+        timeUntilThrow += 20;
         //throw a watermelon out!
         
         WNWatermelon *melon = [WNWatermelon addToScene:self];
@@ -45,8 +49,19 @@
         
         [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%200 + 200)];
         [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/20.0f];
+        
+        [melons addObject:melon];
     }else{
         timeUntilThrow --;
+    }
+    
+    for (int i = melons.count-1; i>0; i--){
+        WNWatermelon *melon = melons[i];
+        if (melon.position.y < -100){
+            //Fell out of world
+            [melon removeFromParent];
+            [melons removeObject:melon];
+        }
     }
 }
 

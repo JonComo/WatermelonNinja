@@ -16,7 +16,7 @@
     
     melon.xScale = melon.yScale = 0.5;
     
-    melon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:melon.size.width/2];
+    melon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:melon.size.width*0.4];
     
     
     [scene addChild:melon];
