@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		338B2EF519A30D71007D3E76 /* bear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EF419A30D71007D3E76 /* bear.jpg */; };
 		338B2EFC19A3159F007D3E76 /* splat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EFB19A3159F007D3E76 /* splat.wav */; };
+		338B2EFF19A31673007D3E76 /* WNBear.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B2EFE19A31673007D3E76 /* WNBear.m */; };
 		869497F719A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
 		869497F919A2FF0600189DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F819A2FF0600189DAE /* CoreGraphics.framework */; };
 		869497FB19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
@@ -47,6 +48,8 @@
 /* Begin PBXFileReference section */
 		338B2EF419A30D71007D3E76 /* bear.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bear.jpg; sourceTree = "<group>"; };
 		338B2EFB19A3159F007D3E76 /* splat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = splat.wav; sourceTree = "<group>"; };
+		338B2EFD19A31673007D3E76 /* WNBear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNBear.h; sourceTree = "<group>"; };
+		338B2EFE19A31673007D3E76 /* WNBear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNBear.m; sourceTree = "<group>"; };
 		869497F319A2FF0600189DAE /* WatermelonNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatermelonNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869497F619A2FF0600189DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		869497F819A2FF0600189DAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -151,6 +154,8 @@
 				8694981119A2FF0600189DAE /* WNMyScene.m */,
 				8694983519A2FFC200189DAE /* WNWatermelon.h */,
 				8694983619A2FFC200189DAE /* WNWatermelon.m */,
+				338B2EFD19A31673007D3E76 /* WNBear.h */,
+				338B2EFE19A31673007D3E76 /* WNBear.m */,
 				8694981519A2FF0600189DAE /* Images.xcassets */,
 				869497FF19A2FF0600189DAE /* Supporting Files */,
 				8694984619A30DF700189DAE /* juiceParticles.sks */,
@@ -305,6 +310,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				338B2EFF19A31673007D3E76 /* WNBear.m in Sources */,
 				8694980F19A2FF0600189DAE /* WNViewController.m in Sources */,
 				8694980519A2FF0600189DAE /* main.m in Sources */,
 				8694984119A306BD00189DAE /* JCMath.m in Sources */,
