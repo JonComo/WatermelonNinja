@@ -14,10 +14,7 @@
 
 #import "JCMath.h"
 
-static const uint32_t watermelonCategory = 0x1 << 0;
-static const uint32_t sliceCategory      = 0x1 << 1;
-static const uint32_t bearCategory       = 0x1 << 2;
-static const uint32_t worldCategory      = 0x1 << 3;
+#import "Constants.h"
 
 @interface WNMyScene () <SKPhysicsContactDelegate>{
     
@@ -126,10 +123,8 @@ static const uint32_t worldCategory      = 0x1 << 3;
         
         [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
         [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
-        melon.physicsBody.categoryBitMask = watermelonCategory;
-        melon.physicsBody.contactTestBitMask = sliceCategory | watermelonCategory | bearCategory;
-        melon.physicsBody.collisionBitMask = watermelonCategory;
-        melon.physicsBody.usesPreciseCollisionDetection = YES;
+
+
         [melons addObject:melon];
         
         WNBear *bear = [WNBear addToScene:world];
@@ -138,12 +133,8 @@ static const uint32_t worldCategory      = 0x1 << 3;
         
         [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
         [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
-        bear.physicsBody.categoryBitMask = bearCategory;
-        bear.physicsBody.contactTestBitMask = sliceCategory | watermelonCategory | bearCategory;
-        bear.physicsBody.collisionBitMask = 0;
 
-        
-        
+        [self runAction:[SKAction playSoundFileNamed:@"imabear.m4a" waitForCompletion:NO]];
         [bears addObject:bear];
     }else{
         timeUntilThrow --;
@@ -161,6 +152,17 @@ static const uint32_t worldCategory      = 0x1 << 3;
             //Fell out of world
             [aBear removeFromParent];
             [bears removeObject:aBear];
+        }
+        if (isSlashing && slashPower > 0.2 && [JCMath distanceBetweenPoint:touchLocation andPoint:aBear.position sorting:NO] < aBear.size.width){
+            //Slashed a melon!!
+            [aBear removeFromParent];
+            [bears removeObject:aBear];
+            [self addDeadBearToPoint:aBear.position];
+            [self addParticlesToPoint:aBear.position];
+            
+            [self runAction:[SKAction playSoundFileNamed:@"splat.wav" waitForCompletion:NO]];
+            
+            screenShake += 8;
         }
         
     }
@@ -239,6 +241,28 @@ static const uint32_t worldCategory      = 0x1 << 3;
     [self runAction:[SKAction waitForDuration:2] completion:^{
         [weakRef removeFromParent];
     }];
+}
+
+- (void)addDeadBearToPoint:(CGPoint)point
+{
+    SKSpriteNode *xbear = [[SKSpriteNode alloc] initWithImageNamed:@"xbear"];
+    xbear.position = CGPointMake(point.x + (float)(arc4random()%40) -20.0f, point.y + (float)(arc4random()%40) -20.0f);
+    xbear.xScale = xbear.yScale = 0.3;
+    
+    [world addChild:xbear];
+    
+    xbear.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:xbear.size.width*0.3];
+    xbear.physicsBody.mass = 0.1;
+    xbear.physicsBody.categoryBitMask = bearCategory;
+    xbear.physicsBody.collisionBitMask = 0;
+    xbear.physicsBody.contactTestBitMask = watermelonCategory|bearCategory|worldCategory;
+    
+    
+    [xbear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
+    [xbear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/200.0f];
+    
+    [effects addObject:xbear];
+    
 }
 
 @end

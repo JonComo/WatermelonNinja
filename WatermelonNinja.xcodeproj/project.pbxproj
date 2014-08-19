@@ -10,6 +10,8 @@
 		338B2EF519A30D71007D3E76 /* bear.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EF419A30D71007D3E76 /* bear.jpg */; };
 		338B2EFC19A3159F007D3E76 /* splat.wav in Resources */ = {isa = PBXBuildFile; fileRef = 338B2EFB19A3159F007D3E76 /* splat.wav */; };
 		338B2EFF19A31673007D3E76 /* WNBear.m in Sources */ = {isa = PBXBuildFile; fileRef = 338B2EFE19A31673007D3E76 /* WNBear.m */; };
+		338B2F0419A3FF85007D3E76 /* xbear.png in Resources */ = {isa = PBXBuildFile; fileRef = 338B2F0319A3FF85007D3E76 /* xbear.png */; };
+		338B2F0619A40172007D3E76 /* imabear.m4a in Resources */ = {isa = PBXBuildFile; fileRef = 338B2F0519A40172007D3E76 /* imabear.m4a */; };
 		869497F719A2FF0600189DAE /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F619A2FF0600189DAE /* Foundation.framework */; };
 		869497F919A2FF0600189DAE /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497F819A2FF0600189DAE /* CoreGraphics.framework */; };
 		869497FB19A2FF0600189DAE /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 869497FA19A2FF0600189DAE /* UIKit.framework */; };
@@ -55,6 +57,9 @@
 		338B2EFB19A3159F007D3E76 /* splat.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = splat.wav; sourceTree = "<group>"; };
 		338B2EFD19A31673007D3E76 /* WNBear.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNBear.h; sourceTree = "<group>"; };
 		338B2EFE19A31673007D3E76 /* WNBear.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNBear.m; sourceTree = "<group>"; };
+		338B2F0219A3FAF0007D3E76 /* Constants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		338B2F0319A3FF85007D3E76 /* xbear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = xbear.png; sourceTree = "<group>"; };
+		338B2F0519A40172007D3E76 /* imabear.m4a */ = {isa = PBXFileReference; lastKnownFileType = file; path = imabear.m4a; sourceTree = "<group>"; };
 		869497F319A2FF0600189DAE /* WatermelonNinja.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatermelonNinja.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		869497F619A2FF0600189DAE /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		869497F819A2FF0600189DAE /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +178,7 @@
 				8694984719A30DF700189DAE /* spark.png */,
 				8694985019A31EEB00189DAE /* WNMenuViewController.h */,
 				8694985119A31EEB00189DAE /* WNMenuViewController.m */,
+				338B2F0219A3FAF0007D3E76 /* Constants.h */,
 			);
 			path = WatermelonNinja;
 			sourceTree = "<group>";
@@ -209,6 +215,8 @@
 		8694983A19A301CF00189DAE /* media */ = {
 			isa = PBXGroup;
 			children = (
+				338B2F0519A40172007D3E76 /* imabear.m4a */,
+				338B2F0319A3FF85007D3E76 /* xbear.png */,
 				8694985319A31FA500189DAE /* playButton.png */,
 				8694984E19A31EB400189DAE /* bg.jpg */,
 				8694984C19A31DC200189DAE /* title.png */,
@@ -305,11 +313,13 @@
 				8694984D19A31DC200189DAE /* title.png in Resources */,
 				8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */,
 				8694985419A31FA500189DAE /* playButton.png in Resources */,
+				338B2F0419A3FF85007D3E76 /* xbear.png in Resources */,
 				338B2EFC19A3159F007D3E76 /* splat.wav in Resources */,
 				338B2EF519A30D71007D3E76 /* bear.jpg in Resources */,
 				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
 				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
 				8694983D19A301CF00189DAE /* melon.png in Resources */,
+				338B2F0619A40172007D3E76 /* imabear.m4a in Resources */,
 				8694984B19A31AD700189DAE /* bear.png in Resources */,
 				8694984319A308B600189DAE /* melonSlice.png in Resources */,
 				8694984519A30DD900189DAE /* juice.png in Resources */,

@@ -7,6 +7,7 @@
 //
 
 #import "WNWatermelon.h"
+#import "Constants.h"
 
 @implementation WNWatermelon
 
@@ -17,7 +18,11 @@
     melon.xScale = melon.yScale = 0.5;
     
     melon.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:melon.size.width*0.4];
-        
+    melon.physicsBody.categoryBitMask = watermelonCategory;
+    melon.physicsBody.contactTestBitMask = sliceCategory | watermelonCategory | bearCategory;
+    melon.physicsBody.collisionBitMask = watermelonCategory;
+    melon.physicsBody.usesPreciseCollisionDetection = YES;
+    
     [scene addChild:melon];
     
     return melon;

@@ -7,8 +7,7 @@
 //
 
 #import "WNBear.h"
-#import "WNMyScene.h"
-
+#import "Constants.h"
 @implementation WNBear
 
 +(WNBear *)addToScene:(SKNode *)scene
@@ -20,6 +19,9 @@
     bear.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:bear.size.width*0.4];
     bear.physicsBody.allowsRotation = NO;
     bear.physicsBody.mass = 0.3;
+    bear.physicsBody.categoryBitMask = bearCategory;
+    bear.physicsBody.contactTestBitMask = sliceCategory | watermelonCategory | bearCategory;
+    bear.physicsBody.collisionBitMask = 0;
     
     [scene addChild:bear];
     
