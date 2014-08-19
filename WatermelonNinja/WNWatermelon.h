@@ -10,6 +10,6 @@
 
 @interface WNWatermelon : SKSpriteNode
 
-+(WNWatermelon *)addToScene:(SKScene *)scene;
++(WNWatermelon *)addToScene:(SKNode *)scene;
 
 @end

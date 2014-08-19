@@ -26,11 +26,17 @@
     BOOL isSlashing;
     
     float slashPower;
+    
+    SKNode *world;
+    
+    int screenShake;
 }
 
 -(id)initWithSize:(CGSize)size {    
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
+        world = [SKNode node];
+        [self addChild:world];
         
         self.physicsWorld.gravity = CGVectorMake(0, -4);
         
@@ -38,6 +44,7 @@
         effects = [NSMutableArray array];
         
         timeUntilThrow = 20;
+        screenShake = 0;
         
         self.backgroundColor = [SKColor colorWithRed:0.15 green:0.15 blue:0.3 alpha:1.0];
         
@@ -76,11 +83,19 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+    
+    if (screenShake > 0){
+        world.position = CGPointMake((float)(arc4random()%screenShake), (float)(arc4random()%screenShake));
+        screenShake--;
+    }else{
+        world.position = CGPointMake(0, 0);
+    }
+    
     if (timeUntilThrow < 0){
         timeUntilThrow += 40;
         //throw a watermelon out!
         
-        WNWatermelon *melon = [WNWatermelon addToScene:self];
+        WNWatermelon *melon = [WNWatermelon addToScene:world];
         melon.position = CGPointMake(arc4random()%(int)self.size.width, -melon.size.height/2);
         
         [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
@@ -113,6 +128,10 @@
             
             [self addSlicesToPoint:melon.position];
             [self addSlicesToPoint:melon.position];
+            
+            [self addParticlesToPoint:melon.position];
+            
+            screenShake += 8;
         }
     }
     
@@ -133,14 +152,28 @@
     slice.position = CGPointMake(point.x + (float)(arc4random()%40) -20.0f, point.y + (float)(arc4random()%40) -20.0f);
     slice.xScale = slice.yScale = 0.5;
     
-    [self addChild:slice];
+    [world addChild:slice];
     
     slice.physicsBody = [SKPhysicsBody bodyWithCircleOfRadius:slice.size.width*0.3];
     slice.physicsBody.mass = 0.1;
     
     [slice.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
+    [slice.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/60.0f];
     
     [effects addObject:slice];
+}
+
+-(void)addParticlesToPoint:(CGPoint)point
+{
+    SKEmitterNode *particles = [NSKeyedUnarchiver unarchiveObjectWithFile:[[NSBundle mainBundle] pathForResource:@"juiceParticles" ofType:@"sks"]];
+    [self addChild:particles];
+    particles.position = point;
+    
+    __weak SKEmitterNode *weakRef = particles;
+    
+    [self runAction:[SKAction waitForDuration:2] completion:^{
+        [weakRef removeFromParent];
+    }];
 }
 
 @end

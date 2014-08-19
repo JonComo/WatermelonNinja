@@ -28,6 +28,9 @@
 		8694983D19A301CF00189DAE /* melon.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694983B19A301CF00189DAE /* melon.png */; };
 		8694984119A306BD00189DAE /* JCMath.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694984019A306BD00189DAE /* JCMath.m */; };
 		8694984319A308B600189DAE /* melonSlice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984219A308B600189DAE /* melonSlice.png */; };
+		8694984519A30DD900189DAE /* juice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984419A30DD900189DAE /* juice.png */; };
+		8694984819A30DF700189DAE /* juiceParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8694984619A30DF700189DAE /* juiceParticles.sks */; };
+		8694984919A30DF700189DAE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984719A30DF700189DAE /* spark.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +73,9 @@
 		8694983F19A306BD00189DAE /* JCMath.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JCMath.h; sourceTree = "<group>"; };
 		8694984019A306BD00189DAE /* JCMath.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JCMath.m; sourceTree = "<group>"; };
 		8694984219A308B600189DAE /* melonSlice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = melonSlice.png; sourceTree = "<group>"; };
+		8694984419A30DD900189DAE /* juice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juice.png; sourceTree = "<group>"; };
+		8694984619A30DF700189DAE /* juiceParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = juiceParticles.sks; sourceTree = "<group>"; };
+		8694984719A30DF700189DAE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -145,6 +151,8 @@
 				8694983619A2FFC200189DAE /* WNWatermelon.m */,
 				8694981519A2FF0600189DAE /* Images.xcassets */,
 				869497FF19A2FF0600189DAE /* Supporting Files */,
+				8694984619A30DF700189DAE /* juiceParticles.sks */,
+				8694984719A30DF700189DAE /* spark.png */,
 			);
 			path = WatermelonNinja;
 			sourceTree = "<group>";
@@ -181,6 +189,7 @@
 		8694983A19A301CF00189DAE /* media */ = {
 			isa = PBXGroup;
 			children = (
+				8694984419A30DD900189DAE /* juice.png */,
 				338B2EF419A30D71007D3E76 /* bear.jpg */,
 				8694984219A308B600189DAE /* melonSlice.png */,
 				8694983B19A301CF00189DAE /* melon.png */,
@@ -265,12 +274,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8694984819A30DF700189DAE /* juiceParticles.sks in Resources */,
+				8694984919A30DF700189DAE /* spark.png in Resources */,
 				8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */,
 				338B2EF519A30D71007D3E76 /* bear.jpg in Resources */,
 				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
 				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
 				8694983D19A301CF00189DAE /* melon.png in Resources */,
 				8694984319A308B600189DAE /* melonSlice.png in Resources */,
+				8694984519A30DD900189DAE /* juice.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
