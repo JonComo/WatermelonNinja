@@ -48,9 +48,9 @@
     // Release any cached data, images, etc that aren't in use.
 }
 
--(BOOL)prefersStatusBarHidden
+-(UIStatusBarStyle)preferredStatusBarStyle
 {
-    return YES;
+    return UIStatusBarStyleLightContent;
 }
 
 @end

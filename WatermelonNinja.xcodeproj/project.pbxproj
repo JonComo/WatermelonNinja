@@ -33,11 +33,6 @@
 		8694984519A30DD900189DAE /* juice.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984419A30DD900189DAE /* juice.png */; };
 		8694984819A30DF700189DAE /* juiceParticles.sks in Resources */ = {isa = PBXBuildFile; fileRef = 8694984619A30DF700189DAE /* juiceParticles.sks */; };
 		8694984919A30DF700189DAE /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984719A30DF700189DAE /* spark.png */; };
-		8694984B19A31AD700189DAE /* bear.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984A19A31AD700189DAE /* bear.png */; };
-		8694984D19A31DC200189DAE /* title.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694984C19A31DC200189DAE /* title.png */; };
-		8694984F19A31EB400189DAE /* bg.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 8694984E19A31EB400189DAE /* bg.jpg */; };
-		8694985219A31EEB00189DAE /* WNMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8694985119A31EEB00189DAE /* WNMenuViewController.m */; };
-		8694985419A31FA500189DAE /* playButton.png in Resources */ = {isa = PBXBuildFile; fileRef = 8694985319A31FA500189DAE /* playButton.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,12 +81,6 @@
 		8694984419A30DD900189DAE /* juice.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = juice.png; sourceTree = "<group>"; };
 		8694984619A30DF700189DAE /* juiceParticles.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = juiceParticles.sks; sourceTree = "<group>"; };
 		8694984719A30DF700189DAE /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
-		8694984A19A31AD700189DAE /* bear.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = bear.png; sourceTree = "<group>"; };
-		8694984C19A31DC200189DAE /* title.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = title.png; sourceTree = "<group>"; };
-		8694984E19A31EB400189DAE /* bg.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = bg.jpg; sourceTree = "<group>"; };
-		8694985019A31EEB00189DAE /* WNMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WNMenuViewController.h; sourceTree = "<group>"; };
-		8694985119A31EEB00189DAE /* WNMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WNMenuViewController.m; sourceTree = "<group>"; };
-		8694985319A31FA500189DAE /* playButton.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = playButton.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -171,8 +160,6 @@
 				869497FF19A2FF0600189DAE /* Supporting Files */,
 				8694984619A30DF700189DAE /* juiceParticles.sks */,
 				8694984719A30DF700189DAE /* spark.png */,
-				8694985019A31EEB00189DAE /* WNMenuViewController.h */,
-				8694985119A31EEB00189DAE /* WNMenuViewController.m */,
 			);
 			path = WatermelonNinja;
 			sourceTree = "<group>";
@@ -209,10 +196,6 @@
 		8694983A19A301CF00189DAE /* media */ = {
 			isa = PBXGroup;
 			children = (
-				8694985319A31FA500189DAE /* playButton.png */,
-				8694984E19A31EB400189DAE /* bg.jpg */,
-				8694984C19A31DC200189DAE /* title.png */,
-				8694984A19A31AD700189DAE /* bear.png */,
 				338B2EFB19A3159F007D3E76 /* splat.wav */,
 				8694984419A30DD900189DAE /* juice.png */,
 				338B2EF419A30D71007D3E76 /* bear.jpg */,
@@ -299,18 +282,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8694984F19A31EB400189DAE /* bg.jpg in Resources */,
 				8694984819A30DF700189DAE /* juiceParticles.sks in Resources */,
 				8694984919A30DF700189DAE /* spark.png in Resources */,
-				8694984D19A31DC200189DAE /* title.png in Resources */,
 				8694980319A2FF0600189DAE /* InfoPlist.strings in Resources */,
-				8694985419A31FA500189DAE /* playButton.png in Resources */,
 				338B2EFC19A3159F007D3E76 /* splat.wav in Resources */,
 				338B2EF519A30D71007D3E76 /* bear.jpg in Resources */,
 				8694981619A2FF0600189DAE /* Images.xcassets in Resources */,
 				8694980C19A2FF0600189DAE /* Main.storyboard in Resources */,
 				8694983D19A301CF00189DAE /* melon.png in Resources */,
-				8694984B19A31AD700189DAE /* bear.png in Resources */,
 				8694984319A308B600189DAE /* melonSlice.png in Resources */,
 				8694984519A30DD900189DAE /* juice.png in Resources */,
 			);
@@ -333,7 +312,6 @@
 			files = (
 				338B2EFF19A31673007D3E76 /* WNBear.m in Sources */,
 				8694980F19A2FF0600189DAE /* WNViewController.m in Sources */,
-				8694985219A31EEB00189DAE /* WNMenuViewController.m in Sources */,
 				8694980519A2FF0600189DAE /* main.m in Sources */,
 				8694984119A306BD00189DAE /* JCMath.m in Sources */,
 				8694980919A2FF0600189DAE /* WNAppDelegate.m in Sources */,

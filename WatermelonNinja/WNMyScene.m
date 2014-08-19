@@ -60,9 +60,6 @@
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
 {
     isSlashing = YES;
-    
-    touchLocation = [[touches anyObject] locationInNode:self];
-    lastTouch = touchLocation;
 }
 
 -(void)touchesMoved:(NSSet *)touches withEvent:(UIEvent *)event
@@ -138,8 +135,6 @@
             [self addSlicesToPoint:melon.position];
             
             [self addParticlesToPoint:melon.position];
-            
-            [self runAction:[SKAction playSoundFileNamed:@"splat.wav" waitForCompletion:NO]];
             
             screenShake += 8;
         }
