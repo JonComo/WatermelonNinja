@@ -141,6 +141,10 @@
     [self touchesEnded:touches withEvent:event];
 }
 
+- (float)randomValueBetween:(float)low andValue:(float)high {
+    return (((float) arc4random() / 0xFFFFFFFFu) * (high - low)) + low;
+}
+
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
 
@@ -156,8 +160,12 @@
         timeUntilThrow += 60;
         //throw a watermelon out!
         
+        float randWatermelons = [self randomValueBetween:0.0 andValue:3.0];
+        for (int i = 0; i <= (int)randWatermelons; i++) {
+            [self addWaterMelonToScene];
+
+        }
         
-        [self addWaterMelonToScene];
         [self addBearToScene];
         
         
