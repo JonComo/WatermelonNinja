@@ -14,6 +14,8 @@
 
 #import "JCMath.h"
 
+#import "WNGameCompleteScene.h"
+
 #import "Constants.h"
 
 @interface WNMyScene () <SKPhysicsContactDelegate>{
@@ -33,6 +35,14 @@
     CGPoint touchLocation;
     CGPoint lastTouch;
     SKSpriteNode *slashNode;
+    
+    int scoreRef;
+    int livesRef;
+    
+    SKLabelNode *score;
+    SKLabelNode *lives;
+    SKLabelNode *scoreLabel;
+    SKLabelNode *livesLabel;
     
     BOOL isSlashing;
     
@@ -66,6 +76,33 @@
         [self addChild:slashNode];
         
         self.physicsWorld.contactDelegate = self;
+        
+        score = [[SKLabelNode alloc] initWithFontNamed:@"Chalkduster"];
+        score.fontSize = 24.0;
+        score.position = CGPointMake(120.0, 300.0);
+        score.text = @"0";
+        [self addChild:score];
+        
+        lives = [[SKLabelNode alloc] initWithFontNamed:@"Chalkduster"];
+        lives.fontSize = 24.0;
+        lives.position = CGPointMake(520.0, 300.0);
+        lives.text = @"3";
+        [self addChild:lives];
+        
+        scoreLabel = [[SKLabelNode alloc] initWithFontNamed:@"Chalkduster"];
+        scoreLabel.fontSize = 24.0;
+        scoreLabel.position = CGPointMake(60.0, 300.0);
+        scoreLabel.text = @"Score : ";
+        [self addChild:scoreLabel];
+        
+        livesLabel = [[SKLabelNode alloc] initWithFontNamed:@"Chalkduster"];
+        livesLabel.fontSize = 24.0;
+        livesLabel.position = CGPointMake(460.0, 300.0);
+        livesLabel.text = @"Lives : ";
+        [self addChild:livesLabel];
+        
+        scoreRef = 0;
+        livesRef = 3;
         
         
     }
@@ -106,6 +143,7 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     /* Called before each frame is rendered */
+
     
     if (screenShake > 0){
         world.position = CGPointMake((float)(arc4random()%screenShake), (float)(arc4random()%screenShake));
@@ -118,24 +156,12 @@
         timeUntilThrow += 60;
         //throw a watermelon out!
         
-        WNWatermelon *melon = [WNWatermelon addToScene:world];
-        melon.position = CGPointMake(arc4random()%(int)self.size.width, -melon.size.height/2);
         
-        [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
-        [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
-
-        [self runAction:[SKAction playSoundFileNamed:@"thoop.wav" waitForCompletion:NO]];
-
-        [melons addObject:melon];
+        [self addWaterMelonToScene];
+        [self addBearToScene];
         
-        WNBear *bear = [WNBear addToScene:world];
-    
-        bear.position = CGPointMake(arc4random()%(int)self.size.width, -bear.size.height/2);
         
-        [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
-        [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
 
-        [bears addObject:bear];
     }else{
         timeUntilThrow --;
     }
@@ -163,6 +189,7 @@
             [self runAction:[SKAction playSoundFileNamed:@"splat.wav" waitForCompletion:NO]];
             
             screenShake += 8;
+            livesRef-=1;
         }
         
     }
@@ -195,6 +222,8 @@
             [self runAction:[SKAction playSoundFileNamed:@"splat.wav" waitForCompletion:NO]];
             
             screenShake += 8;
+            scoreRef+=1;
+
         }
     }
     
@@ -207,6 +236,14 @@
             [node removeFromParent];
         }
     }
+    
+    score.text = [NSString stringWithFormat:@"%i", scoreRef];
+    lives.text = [NSString stringWithFormat:@"%i", livesRef];
+    if (livesRef == 0) {
+        WNGameCompleteScene* gameOverScene = [[WNGameCompleteScene alloc] initWithSize:self.frame.size playerWon:NO];
+        [self.view presentScene:gameOverScene];
+    }
+    
 }
 
 -(void)addSlicesToPoint:(CGPoint)point
@@ -261,8 +298,36 @@
     [xbear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%100) - 50.0f, (float)(arc4random()%100) - 50.0f)];
     [xbear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/200.0f];
     
+    [self runAction:[SKAction playSoundFileNamed:@"imabear.m4a" waitForCompletion:NO]];
+
+    
     [effects addObject:xbear];
     
+}
+
+- (void)addWaterMelonToScene
+{
+    WNWatermelon *melon = [WNWatermelon addToScene:world];
+    melon.position = CGPointMake(arc4random()%(int)self.size.width, -melon.size.height/2);
+    
+    [melon.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
+    [melon.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
+    
+    [self runAction:[SKAction playSoundFileNamed:@"thoop.wav" waitForCompletion:NO]];
+    
+    [melons addObject:melon];
+}
+
+- (void)addBearToScene
+{
+    WNBear *bear = [WNBear addToScene:world];
+    
+    bear.position = CGPointMake(arc4random()%(int)self.size.width, -bear.size.height/2);
+    
+    [bear.physicsBody applyImpulse:CGVectorMake((float)(arc4random()%20) - 10.0f, arc4random()%100 + 100)];
+    [bear.physicsBody applyAngularImpulse:((float)(arc4random()%10) - 5.0f)/40.0f];
+    
+    [bears addObject:bear];
 }
 
 @end
