@@ -11,4 +11,6 @@
 
 @interface WNViewController : UIViewController
 
+-(void)newGame;
+
 @end

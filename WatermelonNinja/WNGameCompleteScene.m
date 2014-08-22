@@ -9,25 +9,53 @@
 #import "WNGameCompleteScene.h"
 
 @implementation WNGameCompleteScene
+{
+    BOOL canRestart;
+}
 
-- (id)initWithSize:(CGSize)size playerWon:(BOOL)won
+- (id)initWithSize:(CGSize)size playerWon:(BOOL)won score:(int)score
 {
     self = [super initWithSize:size];
     if (self) {
-        self.backgroundColor = [SKColor colorWithRed:0.75 green:0.75 blue:0.65 alpha:1.0];
+        SKSpriteNode *bg = [[SKSpriteNode alloc] initWithImageNamed:@"bg.jpg"];
+        bg.position = CGPointMake(size.width/2, size.height/2);
+        [self addChild:bg];
         
         // 1
         SKLabelNode* gameOverLabel = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
         gameOverLabel.fontSize = 42;
-        gameOverLabel.position = CGPointMake(CGRectGetMidX(self.frame), CGRectGetMidY(self.frame));
+        gameOverLabel.position = CGPointMake(size.width/2, size.height/2);
+        
         if (won) {
             gameOverLabel.text = @"Game Won";
         } else {
             gameOverLabel.text = @"Game Over";
         }
+        
         [self addChild:gameOverLabel];
+        
+        SKLabelNode* scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
+        
+        gameOverLabel.fontSize = 42;
+        gameOverLabel.position = CGPointMake(size.width/2, size.height/2 - 60);
+        
+        scoreLabel.text = [NSString stringWithFormat:@"Score: %i", score];
+        
+        [self addChild:scoreLabel];
+        
+        canRestart = NO;
+        [self runAction:[SKAction waitForDuration:1] completion:^{
+            canRestart = YES;
+        }];
     }
     return self;
+}
+
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event
+{
+    if (!canRestart) return;
+    
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"newGame" object:nil];
 }
 
 @end

@@ -10,6 +10,6 @@
 
 @interface WNGameCompleteScene : SKScene
 
-- (id)initWithSize:(CGSize)size playerWon:(BOOL)won;
+- (id)initWithSize:(CGSize)size playerWon:(BOOL)won score:(int)score;
 
 @end

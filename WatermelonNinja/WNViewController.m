@@ -10,19 +10,34 @@
 #import "WNMyScene.h"
 
 @implementation WNViewController
+{
+    SKView * skView;
+}
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 
     // Configure the view.
-    SKView * skView = (SKView *)self.view;
+    skView = (SKView *)self.view;
     skView.showsFPS = YES;
     skView.showsNodeCount = YES;
     
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(newGame) name:@"newGame" object:nil];
+}
+
+-(void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    
+    [self newGame];
+}
+
+-(void)newGame
+{
     // Create and configure the scene.
-    SKScene * scene = [WNMyScene sceneWithSize:CGSizeMake(skView.bounds.size.height, skView.bounds.size.width)];
-    scene.scaleMode = SKSceneScaleModeAspectFill;
+    SKScene * scene = [WNMyScene sceneWithSize:CGSizeMake(skView.bounds.size.width, skView.bounds.size.height)];
+    scene.scaleMode = SKSceneScaleModeAspectFit;
     
     // Present the scene.
     [skView presentScene:scene];
