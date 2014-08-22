@@ -36,8 +36,8 @@
         
         SKLabelNode* scoreLabel = [SKLabelNode labelNodeWithFontNamed:@"Arial"];
         
-        gameOverLabel.fontSize = 42;
-        gameOverLabel.position = CGPointMake(size.width/2, size.height/2 - 60);
+        scoreLabel.fontSize = 42;
+        scoreLabel.position = CGPointMake(size.width/2, size.height/2 - 60);
         
         scoreLabel.text = [NSString stringWithFormat:@"Score: %i", score];
         
