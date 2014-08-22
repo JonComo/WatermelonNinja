@@ -12,6 +12,8 @@
 @implementation WNViewController
 {
     SKView * skView;
+    
+    BOOL didPlaySong;
 }
 
 - (void)viewDidLoad
@@ -38,6 +40,11 @@
     // Create and configure the scene.
     SKScene * scene = [WNMyScene sceneWithSize:CGSizeMake(skView.bounds.size.width, skView.bounds.size.height)];
     scene.scaleMode = SKSceneScaleModeAspectFit;
+    
+    if (!didPlaySong){
+        didPlaySong = YES;
+        [scene runAction:[SKAction repeatActionForever:[SKAction playSoundFileNamed:@"crazy.m4v" waitForCompletion:YES]]];
+    }
     
     // Present the scene.
     [skView presentScene:scene];

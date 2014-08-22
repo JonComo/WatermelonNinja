@@ -57,7 +57,6 @@
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
         
-        
         SKSpriteNode *bg = [[SKSpriteNode alloc] initWithImageNamed:@"bg.jpg"];
         bg.position = CGPointMake(size.width/2, size.height/2);
         [self addChild:bg];
@@ -255,6 +254,8 @@
     score.text = [NSString stringWithFormat:@"%i", scoreRef];
     lives.text = [NSString stringWithFormat:@"%i", livesRef];
     if (livesRef == 0) {
+        [self removeAllActions];
+        
         WNGameCompleteScene* gameOverScene = [[WNGameCompleteScene alloc] initWithSize:self.size playerWon:NO score:scoreRef];
         [self.view presentScene:gameOverScene];
     }
